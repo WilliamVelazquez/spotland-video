@@ -5,9 +5,9 @@ const useInitialState = (API) => {
   useEffect(() => {
     fetch(API)
       .then(response => response.json())
-      .then(data => setData(data));
-    return data;
+      .then(responseData => setData(responseData));
   }, []);
+  return data;
 };
 
 export default useInitialState;
